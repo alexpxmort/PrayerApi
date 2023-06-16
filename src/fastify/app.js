@@ -14,6 +14,8 @@ export const buildApp = () =>{
     logger:true
   })
 
+ 
+
   fastifyApp.register(fastifyAutoload,{
     dir:join(__dirname,'routes'),
     options:{
