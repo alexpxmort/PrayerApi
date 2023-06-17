@@ -1,6 +1,6 @@
 import cache from "../../../helpers/cache.js";
 import { formatDate,getCurrentDate } from "../../../helpers/date.js";
-import { getVideoHomiliaDiariaUseCase, getVideosInfantisUseCase } from "../../../usecases/index.js";
+import { getVideosInfantisUseCase } from "../../../usecases/index.js";
 
 const handler = async (fastify,opts) =>{
   fastify.get('/',async (req,reply) => {
