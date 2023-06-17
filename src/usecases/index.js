@@ -6,6 +6,7 @@ import { getPrayerWord } from "../helpers/video.js";
 import { search } from "../helpers/youtube.js";
 import GetVideoHomiliaDiariaUseCase from "./getVideoHomiliaDiariaUseCase.js";
 import GetVideoReflexaoUseCase from "./getVideoReflexaoUseCase.js";
+import GetVideosInfantisUseCase from "./getVideosInfantisUseCase.js";
 import GetVideosNossaSenhoraUseCase from "./getVideosNossaSenhoraUseCase.js";
 
 const  getVideosNossaSenhora = async () => {   
@@ -35,6 +36,14 @@ const getVideoReflexao = async () =>{
   return {idVideo:result.items?.[Math.floor(Math.random() * result?.items.length)]?.id,theme:`${theme}`}
 }
 
+
+
+const getVideosInfantis = async () =>{
+  const result = await search('desenhos bíblicos infantil ')
+
+  return result
+}
 export const getVideosNossaSenhoraUseCase = new GetVideosNossaSenhoraUseCase(getVideosNossaSenhora)
 export const getVideoHomiliaDiariaUseCase = new GetVideoHomiliaDiariaUseCase(getVideoHomiliaDiaria)
 export const getVideoReflexaoUseCase = new GetVideoReflexaoUseCase(getVideoReflexao)
+export const getVideosInfantisUseCase = new GetVideosInfantisUseCase(getVideosInfantis)
