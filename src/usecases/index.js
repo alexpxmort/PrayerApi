@@ -2,8 +2,10 @@ import { dayVideosNossaSenhora } from "../constants/videos/nove-meses-nossa-senh
 import cache from "../helpers/cache.js";
 import { getCurrentDate,formatDate } from "../helpers/date.js";
 import { capitalize } from "../helpers/str.js";
+import { getPrayerWord } from "../helpers/video.js";
 import { search } from "../helpers/youtube.js";
 import GetVideoHomiliaDiariaUseCase from "./getVideoHomiliaDiariaUseCase.js";
+import GetVideoReflexaoUseCase from "./getVideoReflexaoUseCase.js";
 import GetVideosNossaSenhoraUseCase from "./getVideosNossaSenhoraUseCase.js";
 
 const  getVideosNossaSenhora = async () => {   
@@ -26,5 +28,13 @@ const getVideoHomiliaDiaria = async () =>{
  return Promise.resolve(value)
 }
 
+const getVideoReflexao = async () =>{
+  const theme = getPrayerWord()
+  const result = await search(theme)
+
+  return {idVideo:result.items?.[Math.floor(Math.random() * result?.items.length)]?.id,theme:`${theme}`}
+}
+
 export const getVideosNossaSenhoraUseCase = new GetVideosNossaSenhoraUseCase(getVideosNossaSenhora)
 export const getVideoHomiliaDiariaUseCase = new GetVideoHomiliaDiariaUseCase(getVideoHomiliaDiaria)
+export const getVideoReflexaoUseCase = new GetVideoReflexaoUseCase(getVideoReflexao)

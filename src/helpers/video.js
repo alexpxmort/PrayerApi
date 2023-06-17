@@ -25,7 +25,7 @@ const THEMES_PRAYERS = [
 ]
 
 const getPrayerWord = ()=>{
-const themes= [...THEMES_PRAYERS];
-return themes[Math.floor(Math.random() * themes.length)];
+    const themes= [...THEMES_PRAYERS];
+    return themes[Math.floor(Math.random() * themes.length)];
 }
 export {findVideosByQuery,getPrayerWord}
