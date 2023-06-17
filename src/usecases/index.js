@@ -39,7 +39,7 @@ const getVideoReflexao = async () =>{
 
 
 const getVideosInfantis = async () =>{
-  const result = await search('desenhos bíblicos')
+  const result = await search('desenhos bíblicos infantis anjos da esperança')
 
   return result
 }
