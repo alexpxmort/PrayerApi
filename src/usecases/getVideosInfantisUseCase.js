@@ -9,11 +9,13 @@ export default class GetVideosInfantisUseCase{
   async execute(){
     const videos =  await  this.getVideosInfantis()
 
-    const _videos =  videos.items.slice(0,8).map((video) => ({
+    const _videos =  videos.items.slice(0,6).map((video) => ({
       idVideo: video.id,
       title:video.title,
       channel:video.channelTitle
     }))
+
+
 
     cache.set(`videos_infantis${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`,JSON.stringify(_videos))
 
