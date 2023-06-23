@@ -39,7 +39,7 @@ const getVideoReflexao = async () =>{
 
 
 const getVideosInfantis = async () =>{
-  const result = await search('patrulha caninaa')
+  const result = await search('patrulha canina pt br')
 
   return result
 }
