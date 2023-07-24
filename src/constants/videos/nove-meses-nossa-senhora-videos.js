@@ -730,5 +730,17 @@ export const dayVideosNossaSenhora = [
     month:7,
     number:125,
     code:'lSoZYQgItCs'
+  },
+    {
+    day:25,
+    month:7,
+    number:126,
+    code:'0p1Hzcit16o'
+  },
+    {
+    day:26,
+    month:7,
+    number:127,
+    code:'801jDYwDS7A'
   }
 ]
