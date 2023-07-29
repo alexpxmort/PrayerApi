@@ -750,5 +750,24 @@ export const dayVideosNossaSenhora = [
     code:'CTh1qW303v0'
   },
   { day:28, month:7, number:129, code:'QU2RTtRvkqY' },
-  { day:29, month:7, number:130, code:'zR-pOhV91Ac' }
+  { day:29, month:7, number:130, code:'zR-pOhV91Ac' },
+  {
+    day:30,
+    number:131,
+    month:7,
+    code:'Rs1a1KSGSfI'
+  },
+
+  {
+    day:31,
+    number:132,
+    month:7,
+    code:'0EbXvmuHkPg'
+  },
+  {
+    day:1,
+    month:8,
+    number:133,
+    code:'fDpEatYO_os'
+  }
 ]
