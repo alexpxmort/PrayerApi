@@ -835,5 +835,53 @@ export const dayVideosNossaSenhora = [
     month:8,
     number:144,
     code:'1vbA86oVjPQ'
+  },
+   {
+      day:13,
+    month:8,
+    number:145,
+    code:'WTzSHNFPGRM'
+  },
+   {
+      day:14,
+    month:8,
+    number:146,
+    code:'8l-2BGgjSOE'
+  },
+   {
+      day:15,
+    month:8,
+    number:147,
+    code:'iQ7WBT-w0J0'
+  },
+   {
+      day:16,
+    month:8,
+    number:148,
+    code:'QPyIyC0HzF0'
+  },
+  {
+      day:17,
+    month:8,
+    number:149,
+    code:'3Q0l1JJsSyw'
+  },
+    {
+      day:18,
+    month:8,
+    number:150,
+    code:'vGvoTpuYzTw'
+  },
+   {
+      day:19,
+    month:8,
+    number:151,
+    code:'B73vHr3lq54'
+  },
+   {
+      day:20,
+    month:8,
+    number:152,
+    code:'-1MLffptTgA'
   }
 ]
