@@ -1,4 +1,5 @@
 import { dayVideosNossaSenhora } from "../constants/videos/nove-meses-nossa-senhora-videos.js";
+import { dayVideosQuaresmaSaoMiguel } from "../constants/videos/quaresma-sao-miguel.js";
 import cache from "../helpers/cache.js";
 import { getCurrentDate,formatDate } from "../helpers/date.js";
 import { capitalize } from "../helpers/str.js";
@@ -8,6 +9,7 @@ import GetVideoHomiliaDiariaUseCase from "./getVideoHomiliaDiariaUseCase.js";
 import GetVideoReflexaoUseCase from "./getVideoReflexaoUseCase.js";
 import GetVideosInfantisUseCase from "./getVideosInfantisUseCase.js";
 import GetVideosNossaSenhoraUseCase from "./getVideosNossaSenhoraUseCase.js";
+import GetVideosQuaresmaSaoMiguelUseCase from "./getVideosQuaresmaSaoMiguel.js";
 
 const  getVideosNossaSenhora = async () => {   
   const currentDate = getCurrentDate()
@@ -18,6 +20,17 @@ const  getVideosNossaSenhora = async () => {
 
   return Promise.resolve(code)
 }
+
+const  getVideosQuaresmaSaoMiguel = async () => {   
+  const currentDate = getCurrentDate()
+  const day = dayVideosQuaresmaSaoMiguel.find((dayVideoQuaresmaSaoMiguel) => dayVideoQuaresmaSaoMiguel.day === currentDate.getDate() && dayVideoQuaresmaSaoMiguel.month === currentDate.getMonth()+1)
+  const code = day?.code ?? ''
+
+  cache.set(`quaresma_sao_miguel_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`,code)
+
+  return Promise.resolve(code)
+}
+
 
 const getVideoHomiliaDiaria = async () =>{
   let dayName = capitalize(getCurrentDate().toLocaleDateString('pt-br',{
@@ -47,3 +60,4 @@ export const getVideosNossaSenhoraUseCase = new GetVideosNossaSenhoraUseCase(get
 export const getVideoHomiliaDiariaUseCase = new GetVideoHomiliaDiariaUseCase(getVideoHomiliaDiaria)
 export const getVideoReflexaoUseCase = new GetVideoReflexaoUseCase(getVideoReflexao)
 export const getVideosInfantisUseCase = new GetVideosInfantisUseCase(getVideosInfantis)
+export const getVideosQuaresmaSaoMiguelUseCase = new GetVideosQuaresmaSaoMiguelUseCase(getVideosQuaresmaSaoMiguel)
