@@ -896,10 +896,16 @@ export const dayVideosNossaSenhora = [
     number:154,
     code:'LSUtySHSH18'
   },
-    {
-      day:23,
+  {
+    day:23,
     month:8,
     number:155,
     code:'6dKuK7Q6mKQ'
+  },
+  {
+    day:24,
+    code:'pyyE9XpMwNs',
+    month:8,
+    number:156,
   }
 ]
