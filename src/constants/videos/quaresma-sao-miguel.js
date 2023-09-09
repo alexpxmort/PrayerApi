@@ -138,10 +138,10 @@ export const dayVideosQuaresmaSaoMiguel = [
     code:'vW20ECbi5DE'
   },
   {
-    day:17,
-    month:4,
+    day:7,
+    month:9,
     number:24,
-    code:'kmGd9IRmUeo'
+    code:'69nM8M01Eos'
   },
   {
     day:8,
@@ -150,10 +150,10 @@ export const dayVideosQuaresmaSaoMiguel = [
     code:'-ngT6N6r0p0'
   },
   {
-    day:19,
-    month:4,
+    day:9,
+    month:9,
     number:26,
-    code:'1Dq1TnB63FA'
+    code:'vxqWzW2w9J4'
   },
   {
     day:20,
