@@ -168,10 +168,10 @@ export const dayVideosQuaresmaSaoMiguel = [
     code:'fNWDXCYMSHM'
   },
   {
-    day:22,
-    month:4,
+    day:12,
+    month:9,
     number:29,
-    code:'zXaCYz9ZcEU'
+    code:'2rjzo7jBCqY'
   },
   {
     day:13,
