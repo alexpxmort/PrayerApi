@@ -28,7 +28,7 @@ const  getVideosQuaresmaSaoMiguel = async () => {
 
   cache.set(`quaresma_sao_miguel_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`,code)
 
-  return Promise.resolve({code,start:day?.start,final:day?.final)
+  return Promise.resolve({code,start:day?.start,final:day?.final})
 }
 
 
