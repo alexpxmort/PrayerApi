@@ -5,14 +5,14 @@ import {  getVideosQuaresmaSaoMiguelUseCase } from "../../../usecases/index.js";
 const handler = async (fastify,opts) =>{
   fastify.get('/',async (req,reply) => {
   
-    let videoCode = '';
+    let videoObj = {};
     if(cache.get(`quaresma_sao_miguel_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`)){
         videoCode = cache.get(`quaresma_sao_miguel_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`)
       }else{
-        videoCode =  await getVideosQuaresmaSaoMiguelUseCase.execute()
+        videoObj =  await getVideosQuaresmaSaoMiguelUseCase.execute()
     }
 
-    return  reply.send({code:videoCode})
+    return  reply.send(videoObj)
   })
 }
 
