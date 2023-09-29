@@ -26,9 +26,11 @@ const  getVideosQuaresmaSaoMiguel = async () => {
   const day = dayVideosQuaresmaSaoMiguel.find((dayVideoQuaresmaSaoMiguel) => dayVideoQuaresmaSaoMiguel.day === currentDate.getDate() && dayVideoQuaresmaSaoMiguel.month === currentDate.getMonth()+1)
   const code = day?.code ?? ''
 
-  cache.set(`quaresma_sao_miguel_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`,code)
+  const objPray = {code,start:day?.start,final:day?.final}
 
-  return Promise.resolve({code,start:day?.start,final:day?.final})
+  cache.set(`quaresma_sao_miguel_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`,JSON.stringify(objPray))
+
+  return Promise.resolve(objPray)
 }
 
 
