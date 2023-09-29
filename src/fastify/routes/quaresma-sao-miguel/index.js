@@ -7,7 +7,7 @@ const handler = async (fastify,opts) =>{
   
     let videoObj = {};
     if(cache.get(`quaresma_sao_miguel_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`)){
-        videoCode = cache.get(`quaresma_sao_miguel_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`)
+        videoObj = cache.get(`quaresma_sao_miguel_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`)
       }else{
         videoObj =  await getVideosQuaresmaSaoMiguelUseCase.execute()
     }
