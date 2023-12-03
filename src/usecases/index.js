@@ -1,7 +1,8 @@
-import { dayVideosNossaSenhora } from "../constants/videos/nove-meses-nossa-senhora-videos.js";
+import { mapTo } from "x-utils-rx";
 import { dayVideosQuaresmaSaoMiguel } from "../constants/videos/quaresma-sao-miguel.js";
 import cache from "../helpers/cache.js";
 import { getCurrentDate,formatDate } from "../helpers/date.js";
+import repo from "../helpers/firebase/repository.js";
 import { capitalize } from "../helpers/str.js";
 import { getPrayerWord } from "../helpers/video.js";
 import { search } from "../helpers/youtube.js";
@@ -13,8 +14,10 @@ import GetVideosQuaresmaSaoMiguelUseCase from "./getVideosQuaresmaSaoMiguel.js";
 
 const  getVideosNossaSenhora = async () => {   
   const currentDate = getCurrentDate()
-  const day = dayVideosNossaSenhora.find((dayVideoNossaSenhora) => dayVideoNossaSenhora.day === currentDate.getDate() && dayVideoNossaSenhora.month === currentDate.getMonth()+1)
-  const code = day?.code ?? ''
+
+  let result = await repo.find( currentDate.getDate() ,currentDate.getMonth()+1)
+  result = mapTo(result.docs[0].data(),undefined,['code'],'keep');
+  const code = result?.code ?? ''
 
   cache.set(`holy_mary_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`,code)
 
