@@ -11,6 +11,8 @@ import GetVideoReflexaoUseCase from "./getVideoReflexaoUseCase.js";
 import GetVideosInfantisUseCase from "./getVideosInfantisUseCase.js";
 import GetVideosNossaSenhoraUseCase from "./getVideosNossaSenhoraUseCase.js";
 import GetVideosQuaresmaSaoMiguelUseCase from "./getVideosQuaresmaSaoMiguel.js";
+import GetVideosTresMesesSaoJoseUseCase from "./getVideosTresMesesSaoJoseUseCase.js";
+import { dayVideosTresMesesSaoJose } from "../constants/videos/tres-meses-sao-jose.js";
 
 const  getVideosNossaSenhora = async () => {   
   const currentDate = getCurrentDate()
@@ -32,6 +34,18 @@ const  getVideosQuaresmaSaoMiguel = async () => {
   const objPray = {code,start:day?.start,final:day?.final}
 
   cache.set(`quaresma_sao_miguel_${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`,JSON.stringify(objPray))
+
+  return Promise.resolve(objPray)
+}
+
+const  getVideosTresMesesSaoJose = async () => {   
+  const currentDate = getCurrentDate()
+  const day = dayVideosTresMesesSaoJose.find((dayVideoTresMesesSaoJose) => dayVideoTresMesesSaoJose.day === currentDate.getDate() && dayVideoTresMesesSaoJose.month === currentDate.getMonth()+1)
+  const codeAttr = day?.code ?? ''
+
+  const objPray = {code:codeAttr}
+
+  cache.set(`sao_jose_tres_meses${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`,JSON.stringify(objPray))
 
   return Promise.resolve(objPray)
 }
@@ -66,3 +80,4 @@ export const getVideoHomiliaDiariaUseCase = new GetVideoHomiliaDiariaUseCase(get
 export const getVideoReflexaoUseCase = new GetVideoReflexaoUseCase(getVideoReflexao)
 export const getVideosInfantisUseCase = new GetVideosInfantisUseCase(getVideosInfantis)
 export const getVideosQuaresmaSaoMiguelUseCase = new GetVideosQuaresmaSaoMiguelUseCase(getVideosQuaresmaSaoMiguel)
+export const getVideosTresMesesSaoJoseUseCase = new GetVideosTresMesesSaoJoseUseCase(getVideosTresMesesSaoJose)
