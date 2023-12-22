@@ -10,64 +10,70 @@ const bissexto = (ano = new Date().getFullYear() ) => {
 
 export   const dayVideosTresMesesSaoJose = [
   {
-    day:20,
+    day:19,
     month:12,
     number:1,
     code:'JSVpgMO2Aik'
   },
   {
-    day:21,
+    day:20,
     month:12,
     number:2,
     code:'d6dhed4xqa0'
   },
   {
-    day:22,
+    day:21,
     month:12,
     number:3,
     code:'Zqc0kgy2NrE'
   },
   {
-    day:23,
+    day:22,
     month:12,
     number:4,
     code:'HL9UqA3rY3w'
   },
   {
-    day:24,
+    day:23,
     month:12,
     number:5,
     code:'t8VJLDV_OEM'
   },
   {
-    day:25,
+    day:24,
     month:12,
     number:6,
     code:'Byw-K4T3MJ8'
   },
   {
-    day:26,
+    day:25,
     month:12,
     number:7,
     code:'_K5fz0X2cx0'
   },
   {
-    day:27,
+    day:26,
     month:12,
     number:8,
     code:'tyzBW9PVYAM'
   },
   {
-    day:28,
+    day:27,
     month:12,
     number:9,
     code:'xMrBzvTUl94'
   },
   {
-    day:29,
+    day:28,
     month:12,
     number:10,
     code:'fpqZN2m-AJQ'
+  },
+  {
+    day:29,
+    month:12,
+    number:11,
+    code:'9UVIm4oDFZI'
   },
   {
     day:30,
@@ -116,8 +122,7 @@ export   const dayVideosTresMesesSaoJose = [
     month:1,
     number:19,
     code:'XlZm8RhSj_c'
-  },
-  {
+  }, {
     day:7,
     month:1,
     number:20,
@@ -127,7 +132,8 @@ export   const dayVideosTresMesesSaoJose = [
     month:1,
     number:21,
     code:'p_we44Q88EY'
-  }, {
+  },
+  {
     day:9,
     month:1,
     number:22,
@@ -427,7 +433,7 @@ export   const dayVideosTresMesesSaoJose = [
     number:71,
     code:'UPyLRNp-35k'
   },
-  {
+ {
     day:28,
     month:2,
     number:72,
@@ -546,7 +552,7 @@ export   const dayVideosTresMesesSaoJose = [
     month:getValue(3,3,date.getFullYear()),
     number:91,
     code:'guviVH4XaHU',
-    final:true
-  },
+  }
 
 ]
+
