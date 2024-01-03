@@ -1,26 +1,25 @@
 import NodeCache from 'node-cache';
 
 class Cache {
-
   constructor() {
     this.cache = new NodeCache();
   }
 
-   set(key, value) {
+  set(key, value) {
     return this.cache.set(key, value);
   }
 
-   get(key) {
+  get(key) {
     return this.cache.get(key);
   }
 
-   del(key) {
+  del(key) {
     return this.cache.del(key);
   }
 
-   flush() {
+  flush() {
     this.cache.flushAll();
   }
 }
 
-export default new  Cache();
+export default new Cache();
