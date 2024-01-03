@@ -20,10 +20,9 @@ export default class GetVideoHomiliaDiariaUseCase{
      
 
     
-      const homilia = await search(`homilia diaria`,false,5)
-      return homilia.items?.[0]?.id ?? ''
+      
     
-    
+    return videoDiario?.id.
     
   }
 }
