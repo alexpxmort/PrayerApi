@@ -15,7 +15,6 @@ const start = async () => {
     await server.register(cors, {
       hook: 'preHandler'
     });
-    console.log('2024')
     await server.listen({ port: config.server.port });
   } catch (err) {
     server.log.error(err);
