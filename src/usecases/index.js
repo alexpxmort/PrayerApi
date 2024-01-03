@@ -56,7 +56,8 @@ const getVideoHomiliaDiaria = async () =>{
       weekday:`long`
   }))
   const padreMario = 'homilia diaria padre mario' + '|' + dayName
-  const value = await search(`${padreMario}`,false,5)
+  const value = await search(`${padreMario}`,false,20)
+console.log(JSON.stringify(value,null,2))
 
  return Promise.resolve(value)
 }
