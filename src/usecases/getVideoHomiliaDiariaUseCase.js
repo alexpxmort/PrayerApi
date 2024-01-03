@@ -17,13 +17,13 @@ export default class GetVideoHomiliaDiariaUseCase{
     let videos = findVideosByQuery(value.items,'Padre Mario Sartori')
     let  videoDiario  = videos.find((video) => video.title.includes(dayName))
 
-    cache.set(`homilia_diaria${formatDate(getCurrentDate(),'dd-mm-yyyy','-')}`,videoDiario?.id ?? '')
+     
 
-    if(!videoDiario?.id){
+    
       const homilia = await search(`homilia diaria`,false,5)
       return homilia.items?.[0]?.id ?? ''
-    }
     
-    return videoDiario?.id ?? '';
+    
+    
   }
 }
