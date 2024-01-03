@@ -22,7 +22,7 @@ export default class GetVideoHomiliaDiariaUseCase{
     
       
     
-    return videoDiario?.id.
+    return videoDiario?.id ?? '';
     
   }
 }
