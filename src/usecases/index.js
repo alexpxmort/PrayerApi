@@ -77,7 +77,7 @@ const getVideoHomiliaDiaria = async () => {
     })
   );
   const padreMario = 'homilia diaria padre mario' + '|' + dayName;
-  const value = await search(`${padreMario}`, false, 1000);
+  const value = await search(`${padreMario}`, false, 2000);
 
   return Promise.resolve(value);
 };
