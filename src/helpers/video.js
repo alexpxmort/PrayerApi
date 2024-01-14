@@ -1,11 +1,19 @@
+const currentYear = new Date().getFullYear();
+const currentMoth = new Date().getMonth();
+
 const findVideosByQuery = (
   arr,
   query = 'Padre Mario Sartori',
-  title = 'Homilia Diária'
+  title = 'Homilia Diária',
+  dayName = ``
 ) => {
   return arr.filter(
     (video) =>
-      video.channelTitle?.includes(query) && video.title.includes(title)
+      new Date(video.date).getFullYear() === currentYear &&
+      new Date(video.date).getMonth() === currentMoth &&
+      video.channelTitle?.includes(query) &&
+      video.title.includes(title) &&
+      video.title.includes(dayName)
   );
 };
 

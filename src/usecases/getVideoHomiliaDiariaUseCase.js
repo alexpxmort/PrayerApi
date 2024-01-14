@@ -15,9 +15,10 @@ export default class GetVideoHomiliaDiariaUseCase {
     );
     const value = await this.getVideoHomiliaDiaria();
     const videos = findVideosByQuery(
-      value.items,
+      value,
       'Padre Mario Sartori',
-      `Homilia Diária | ${dayName}`
+      `Homilia Diária`,
+      `${dayName}`
     );
 
     return videos?.[0]?.id;
