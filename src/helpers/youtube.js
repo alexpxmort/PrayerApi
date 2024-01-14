@@ -1,4 +1,3 @@
-import { apiKeyYoutube } from '../config/keys/key.js';
 import fetch from 'node-fetch';
 
 const search = async (
@@ -9,7 +8,7 @@ const search = async (
   options = {}
 ) => {
   // Specify your YouTube Data API key
-  const apiKey = apiKeyYoutube;
+  const apiKey = process.env.YOUTUBE_API_KEY;
 
   // Set the parameters for the search request
 

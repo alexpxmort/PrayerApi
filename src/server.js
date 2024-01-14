@@ -3,6 +3,9 @@ import setTZ from 'set-tz';
 import cache from './helpers/cache.js';
 import config from './config/index.js';
 import cors from '@fastify/cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 setTZ(`America/Sao_Paulo`);
 

@@ -13,5 +13,3 @@ export const jsonConfig = {
     'https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-w8l7a%40rosaryseven.iam.gserviceaccount.com',
   universe_domain: 'googleapis.com'
 };
-
-export const apiKeyYoutube = `AIzaSyBTSRSYnLA8be4PO8jbuJdIXB7B5va0Z7Q`;
