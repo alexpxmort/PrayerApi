@@ -81,7 +81,8 @@ const getVideoHomiliaDiaria = async () => {
     `UCuQH2IQ95hg72ZmC0P5V-bg`,
     `${padreMario}`,
     false,
-    1000
+    1000,
+    '2024-01-01T00:00:00Z'
   );
   console.log(value)
 
