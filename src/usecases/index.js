@@ -83,7 +83,7 @@ const getVideoHomiliaDiaria = async () => {
     false,
     1000,
     {},
-    '2024-01-01T00:00:00Z'
+    '2024-02-05T00:00:00Z'
   );
   console.log(value)
 
