@@ -5,7 +5,8 @@ const search = async (
   key,
   withPlaylist = false,
   limit = 10,
-  options = {}
+  options = {},
+  publishedAfter = undefined
 ) => {
   // Specify your YouTube Data API key
   const apiKey = process.env.YOUTUBE_API_KEY;
@@ -30,7 +31,7 @@ const search = async (
       part: 'snippet',
       key: apiKey,
       order: 'date',
-      publishedAfter: '1970-01-01T00:00:00Z',
+      publishedAfter:publishedAfter ? publishedAfter : '1970-01-01T00:00:00Z',
       ...options
     });
   }
