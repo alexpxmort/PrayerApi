@@ -6,6 +6,7 @@ const handler = async (fastify, opts) => {
     let videoCode = '';
 
     videoCode = await getVideoHomiliaDiariaUseCase.execute();
+    console.log(videoCode)
     return reply.send({ idVideo: videoCode });
   });
 };
