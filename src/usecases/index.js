@@ -76,14 +76,19 @@ const getVideoHomiliaDiaria = async () => {
       weekday: `long`
     })
   );
+  const day =  (new Date().getDate() - 1).toString().padStart(2,"0")
+  const month =  (new Date().getMonth() +1).toString().padStart(2,"0")
+  console.log(`2024-${month}-${day}T00:00:00`)
+  
   const padreMario = 'homilia diaria padre mario' + '|' + dayName;
+  
   const value = await search(
     `UCuQH2IQ95hg72ZmC0P5V-bg`,
     `${padreMario}`,
     false,
-    1000,
+    10,
     {},
-    '2024-02-05T00:00:00Z'
+    `2024-${month}-${day}T00:00:00Z`
   );
   console.log(value)
 
